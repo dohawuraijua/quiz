@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 
 Route::post("quiz/isian", [IsianController::class, 'index']);
+Route::post("quiz/isian/generate", [IsianController::class, 'generateSoalTanggal']);

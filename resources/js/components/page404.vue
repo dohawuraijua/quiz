@@ -16,7 +16,7 @@ import toastService from './helper/toastService';
 import RequestManager from './helper/RequestManager';
 import { dekripsi } from './helper/crypt';
 import { login_state } from '../stores/login_state';
-import router from '../router/approuter';
+
 
 const defaultConfig = {
   background_gradient_start: "#667eea",

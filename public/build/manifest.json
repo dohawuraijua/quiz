@@ -1,10 +1,7 @@
 {
-  "_LoginPage-BETsAlet.js": {
-    "file": "assets/LoginPage-BETsAlet.js",
+  "_LoginPage-CsaxpOYS.js": {
+    "file": "assets/LoginPage-CsaxpOYS.js",
     "name": "LoginPage",
-    "imports": [
-      "_PaginationTail-MHqDB2Ds.js"
-    ],
     "css": [
       "assets/LoginPage-cMLludT2.css"
     ]
@@ -12,45 +9,6 @@
   "_LoginPage-cMLludT2.css": {
     "file": "assets/LoginPage-cMLludT2.css",
     "src": "_LoginPage-cMLludT2.css"
-  },
-  "_PaginationTail-MHqDB2Ds.js": {
-    "file": "assets/PaginationTail-MHqDB2Ds.js",
-    "name": "PaginationTail",
-    "css": [
-      "assets/PaginationTail-ZQP52vsz.css"
-    ]
-  },
-  "_PaginationTail-ZQP52vsz.css": {
-    "file": "assets/PaginationTail-ZQP52vsz.css",
-    "src": "_PaginationTail-ZQP52vsz.css"
-  },
-  "_approuter--5VD3njq.js": {
-    "file": "assets/approuter--5VD3njq.js",
-    "name": "approuter",
-    "imports": [
-      "_PaginationTail-MHqDB2Ds.js"
-    ],
-    "css": [
-      "assets/approuter-NYwidvIt.css"
-    ]
-  },
-  "_approuter-NYwidvIt.css": {
-    "file": "assets/approuter-NYwidvIt.css",
-    "src": "_approuter-NYwidvIt.css"
-  },
-  "_loadingbar-BbxiIpH1.css": {
-    "file": "assets/loadingbar-BbxiIpH1.css",
-    "src": "_loadingbar-BbxiIpH1.css"
-  },
-  "_loadingbar-lKKGf_bi.js": {
-    "file": "assets/loadingbar-lKKGf_bi.js",
-    "name": "loadingbar",
-    "imports": [
-      "_PaginationTail-MHqDB2Ds.js"
-    ],
-    "css": [
-      "assets/loadingbar-BbxiIpH1.css"
-    ]
   },
   "resources/css/app.css": {
     "file": "assets/app-sFXUwolh.css",
@@ -62,39 +20,24 @@
     ]
   },
   "resources/js/admin.js": {
-    "file": "assets/admin-P8IjK1e-.js",
+    "file": "assets/admin-Wl5gJKkj.js",
     "name": "admin",
     "src": "resources/js/admin.js",
     "isEntry": true,
     "imports": [
-      "_loadingbar-lKKGf_bi.js",
-      "_PaginationTail-MHqDB2Ds.js",
-      "_LoginPage-BETsAlet.js"
+      "_LoginPage-CsaxpOYS.js"
     ],
     "css": [
-      "assets/admin-CH12ogV2.css"
-    ]
-  },
-  "resources/js/app.js": {
-    "file": "assets/app-DXudS78h.js",
-    "name": "app",
-    "src": "resources/js/app.js",
-    "isEntry": true,
-    "imports": [
-      "_loadingbar-lKKGf_bi.js",
-      "_PaginationTail-MHqDB2Ds.js",
-      "_approuter--5VD3njq.js"
+      "assets/admin-z5ty4T8q.css"
     ]
   },
   "resources/js/login.js": {
-    "file": "assets/login-ByqOAbHr.js",
+    "file": "assets/login-CVvBn29R.js",
     "name": "login",
     "src": "resources/js/login.js",
     "isEntry": true,
     "imports": [
-      "_PaginationTail-MHqDB2Ds.js",
-      "_LoginPage-BETsAlet.js",
-      "_approuter--5VD3njq.js"
+      "_LoginPage-CsaxpOYS.js"
     ],
     "css": [
       "assets/login-DprVfDGG.css"
