@@ -10,11 +10,10 @@
     <meta name="keywords" content="elearning, online course, web development, ui/ux, data analytics">
     <meta name="author" content="Andre">
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Elearning APP - Platform Pembelajaran Online">
     <meta property="og:description" content="Lanjutkan perjalanan belajar Anda dengan kursus Web Development, UI/UX Design, dan Data Analytics">
     <meta property="og:type" content="website">
-    <title>English Quiz for Learn</title>
+    <title>G-English Quiz for Learn</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     @vite(['resources/css/app.css', 'resources/js/admin.js'])
