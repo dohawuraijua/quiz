@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AdminLayout from '../admin.vue';
 import Home from '../components/admin/dashboard/HomeUser.vue';
 import QuizIsian from '../components/admin/quiz/isian.vue';
+import QuizIsianHasil from '../components/admin/quiz/isian_hasil.vue';
 const routes = [
     {
         path: '/',
@@ -18,6 +19,11 @@ const routes = [
                 path: 'isian',
                 name: 'resources_isian',
                 component: QuizIsian,
+            },
+            {
+                path: 'isian-hasil',
+                name: 'resources_isian_hasil',
+                component: QuizIsianHasil,
             },
         ]
     },

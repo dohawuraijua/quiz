@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Quiz;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Service\GeminiService;
+use App\Http\Controllers\Traits\ApiResponser;
 use App\Models\Quiz\IsianModel;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Traits\ApiResponser;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 
@@ -54,14 +55,52 @@ class IsianController extends Controller
         if ($soalCount < 10) {
             $jumlahGenerasi = 10 - $soalCount;
         }
+
+        try {
+            $this->cekHasil();
+        } catch (\Throwable $th) {
+        }
+
         if ($jumlahGenerasi == 0) {
             return $this->successResponse([], Response::HTTP_OK, 'success', 'success');
+        } else {
+            $soal = IsianModel::where("indonesian_word", NULL)->limit($jumlahGenerasi)->get();
+            foreach ($soal as $key => $value) {
+                $value->quiz_date = $date;
+                $value->save();
+            }
+            return $this->successResponse([], Response::HTTP_OK, 'success', 'success');
         }
-        $soal = IsianModel::where("indonesian_word", NULL)->limit($jumlahGenerasi)->get();
-        foreach ($soal as $key => $value) {
-            $value->quiz_date = $date;
-            $value->save();
+    }
+
+    function cekHasil()
+    {
+        $words = IsianModel::whereNull('is_checked')->where("indonesian_word", '!=', NULL)->limit(10)->get();
+
+        if ($words->count() === 0) {
+            return $this->successResponse([], Response::HTTP_OK, 'no words to check', 'success');
         }
-        return $this->successResponse([], Response::HTTP_OK, 'success', 'success');
+
+        $gemini = new GeminiService();
+        $results = $gemini->checkWords($words);
+
+        try {
+            foreach ($results as $index => $result) {
+
+                $word = $words[$index];
+
+                $word->update([
+                    'is_checked' => 1,
+                    'score' => $result['score'],
+                    'ai_feedback' => $result['feedback'] ?? null
+                ]);
+            }
+        } catch (\Throwable $th) {
+            Log::error($th);
+        }
+
+
+
+        return $this->successResponse([], Response::HTTP_OK, 'Words checked successfully', 'success');
     }
 }

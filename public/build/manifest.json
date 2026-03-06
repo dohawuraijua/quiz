@@ -1,6 +1,6 @@
 {
-  "_LoginPage-CsaxpOYS.js": {
-    "file": "assets/LoginPage-CsaxpOYS.js",
+  "_LoginPage-C0w8CXD1.js": {
+    "file": "assets/LoginPage-C0w8CXD1.js",
     "name": "LoginPage",
     "css": [
       "assets/LoginPage-cMLludT2.css"
@@ -20,24 +20,24 @@
     ]
   },
   "resources/js/admin.js": {
-    "file": "assets/admin-Wl5gJKkj.js",
+    "file": "assets/admin-nf0mp0fH.js",
     "name": "admin",
     "src": "resources/js/admin.js",
     "isEntry": true,
     "imports": [
-      "_LoginPage-CsaxpOYS.js"
+      "_LoginPage-C0w8CXD1.js"
     ],
     "css": [
-      "assets/admin-z5ty4T8q.css"
+      "assets/admin-ohE9TnZh.css"
     ]
   },
   "resources/js/login.js": {
-    "file": "assets/login-CVvBn29R.js",
+    "file": "assets/login-BgTA-gIs.js",
     "name": "login",
     "src": "resources/js/login.js",
     "isEntry": true,
     "imports": [
-      "_LoginPage-CsaxpOYS.js"
+      "_LoginPage-C0w8CXD1.js"
     ],
     "css": [
       "assets/login-DprVfDGG.css"

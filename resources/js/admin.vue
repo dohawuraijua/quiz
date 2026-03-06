@@ -41,6 +41,9 @@
               <div id="submenu-quiz" class="submenu">
                 <router-link to="/quiz/isian" class="submenu-item flex items-center px-4 py-2 pl-14 text-white text-sm">
                   Isian </router-link>
+                <router-link to="/quiz/isian-hasil"
+                  class="submenu-item flex items-center px-4 py-2 pl-14 text-white text-sm">
+                  Isian Hasil</router-link>
               </div>
             </div>
 
