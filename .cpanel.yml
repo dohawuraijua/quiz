@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/alstudio/quiz.alstudio.my.id/
+    - /bin/cp -R . $DEPLOYPATH

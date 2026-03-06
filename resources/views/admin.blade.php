@@ -14,7 +14,7 @@
     <meta property="og:title" content="Elearning APP - Platform Pembelajaran Online">
     <meta property="og:description" content="Lanjutkan perjalanan belajar Anda dengan kursus Web Development, UI/UX Design, dan Data Analytics">
     <meta property="og:type" content="website">
-    <title>Elearning APP</title>
+    <title>English Elearning</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     @vite(['resources/css/app.css', 'resources/js/admin.js'])
