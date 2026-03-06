@@ -21,7 +21,7 @@ class IsianHasilController extends Controller
 
     function view($req)
     {
-        $soal = IsianModel::where("indonesian_word", "!=", "")->orderBy("quiz_date")->paginate(10);
+        $soal = IsianModel::where("indonesian_word", "!=", "")->orderByDesc("updated_at")->paginate(10);
 
         return $this->successResponse($soal, Response::HTTP_OK, 'success', 'success');
     }
