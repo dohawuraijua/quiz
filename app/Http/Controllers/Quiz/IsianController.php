@@ -40,6 +40,7 @@ class IsianController extends Controller
         $save = IsianModel::where("id", $question_id)->first();
         if ($save) {
             $save->indonesian_word = $answer;
+            $save->is_checked = 2;
             $save->save();
         }
 
@@ -75,7 +76,7 @@ class IsianController extends Controller
 
     function cekHasil()
     {
-        $words = IsianModel::whereNull('is_checked')->where("indonesian_word", '!=', NULL)->limit(10)->get();
+        $words = IsianModel::whereNull('is_checked', 2)->where("indonesian_word", '!=', NULL)->limit(10)->get();
 
         if ($words->count() === 0) {
             return $this->successResponse([], Response::HTTP_OK, 'no words to check', 'success');
