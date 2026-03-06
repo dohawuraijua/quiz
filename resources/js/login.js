@@ -1,10 +1,9 @@
-import './bootstrap';
 import { createApp } from 'vue';
-import router from './router/approuter.js';
+import router from './router/loginroute.js';
 
 const app = createApp({});
 
-import appVue from './app.vue';
+import appVue from './login.vue';
 app.component('App', appVue);
 app.use(router);
 app.mount('#app');
