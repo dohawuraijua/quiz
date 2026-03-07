@@ -77,7 +77,7 @@ class IsianController extends Controller
 
     function cekHasil()
     {
-        $words = IsianModel::whereNull('is_checked', 2)->limit(10)->get();
+        $words = IsianModel::where('is_checked', 2)->limit(10)->get();
 
         if ($words->count() === 0) {
             return $this->successResponse([], Response::HTTP_OK, 'no words to check', 'success');
