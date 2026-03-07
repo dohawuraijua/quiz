@@ -60,6 +60,7 @@ class IsianController extends Controller
         try {
             $this->cekHasil();
         } catch (\Throwable $th) {
+            Log::error($th);
         }
 
         if ($jumlahGenerasi == 0) {
@@ -76,7 +77,7 @@ class IsianController extends Controller
 
     function cekHasil()
     {
-        $words = IsianModel::whereNull('is_checked', 2)->where("indonesian_word", '!=', NULL)->limit(10)->get();
+        $words = IsianModel::whereNull('is_checked', 2)->limit(10)->get();
 
         if ($words->count() === 0) {
             return $this->successResponse([], Response::HTTP_OK, 'no words to check', 'success');
