@@ -4,7 +4,7 @@
             <div class="max-w-8xl mx-auto">
                 <div class="w-full rounded  p-0">
                     <div class="flex flex-wrap w-full justify-between items-start gap-3 mb-3">
-                        <button class="py-1 px-2 bg-blue-500" @click="getNew()">Get New</button>
+                        <button class="py-1 px-2 bg-blue-500 rounded-md text-white" @click="getNew()">Get New</button>
                     </div>
                     <SkeletonTable v-if="loadingView" :rows="10" :columns="columns.length" />
                     <div v-else>
