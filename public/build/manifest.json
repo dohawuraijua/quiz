@@ -20,7 +20,7 @@
     ]
   },
   "resources/js/admin.js": {
-    "file": "assets/admin-nf0mp0fH.js",
+    "file": "assets/admin-G5ZNCqqt.js",
     "name": "admin",
     "src": "resources/js/admin.js",
     "isEntry": true,
@@ -28,7 +28,7 @@
       "_LoginPage-C0w8CXD1.js"
     ],
     "css": [
-      "assets/admin-ohE9TnZh.css"
+      "assets/admin-pOPsOGvp.css"
     ]
   },
   "resources/js/login.js": {

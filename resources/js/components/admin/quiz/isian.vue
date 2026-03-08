@@ -4,6 +4,7 @@
             <div class="max-w-8xl mx-auto">
                 <div class="w-full rounded  p-0">
                     <div class="flex flex-wrap w-full justify-between items-start gap-3 mb-3">
+                        <button class="py-1 px-2 bg-blue-500" @click="getNew()">Get New</button>
                     </div>
                     <SkeletonTable v-if="loadingView" :rows="10" :columns="columns.length" />
                     <div v-else>
@@ -114,6 +115,23 @@ export default {
                 console.error("Error saving answer:", error);
             }
         },
+
+        async getNew() {
+            let parameter = {
+                "action": "generate"
+            }
+
+            try {
+                const response = await RequestManager("quiz/isian/generate", parameter);
+                if (response.data.type == "success") {
+                    toastService.show("Berhasil", "Soal baru tersedia.", "success");
+                } else {
+                    toastService.show("Gagal", response.data.message, "error");
+                }
+            } catch (error) {
+                toastService.show("Error", "Terjadi kesalahan ", "error");
+            }
+        }
 
     },
 };
