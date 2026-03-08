@@ -66,7 +66,7 @@ class IsianController extends Controller
         if ($jumlahGenerasi == 0) {
             return $this->successResponse([], Response::HTTP_OK, 'success', 'success');
         } else {
-            $soal = IsianModel::where("indonesian_word", NULL)->limit($jumlahGenerasi)->get();
+            $soal = IsianModel::where("indonesian_word", NULL)->limit($jumlahGenerasi)->inRandomOrder()->get();
             foreach ($soal as $key => $value) {
                 $value->quiz_date = $date;
                 $value->save();
